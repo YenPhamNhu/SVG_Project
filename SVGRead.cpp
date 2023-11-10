@@ -9,6 +9,7 @@
 using namespace std;
 using namespace rapidxml;
 using namespace Gdiplus;
+#include "rapidxml.hpp"
 #pragma comment(lib, "Gdiplus.lib")
 // starting point (0, 0) and the ending point (200, 100) of the line.
 // Ref: https://learn.microsoft.com/en-us/windows/win32/gdiplus/-gdiplus-drawing-a-line-use
@@ -28,46 +29,6 @@ INT WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, PSTR, INT iCmdShow)
     WNDCLASS wndClass;
     GdiplusStartupInput gdiplusStartupInput;
     ULONG_PTR gdiplusToken;
-
-    // Read XML
-    xml_document<> doc;
-    xml_node<> *rootNode;
-    // Read the xml file into a vector
-    ifstream file("sample.svg");
-    vector<char> buffer((istreambuf_iterator<char>(file)), istreambuf_iterator<char>());
-    buffer.push_back('\0');
-    // Parse the buffer using the xml file parsing library into doc
-    doc.parse<0>(&buffer[0]);
-
-    rootNode = doc.first_node();
-    xml_node<> *node = rootNode->first_node();
-
-    while (node != NULL)
-    {
-        char *nodeName = node->name();
-        xml_attribute<> *firstAttribute = node->first_attribute();
-        char *attributeName = firstAttribute->name();
-        char *attributeValue = firstAttribute->value();
-        xml_attribute<> *secondAttribute = firstAttribute->next_attribute();
-        // Set breakpoint here to view value
-        // Ref: http://rapidxml.sourceforge.net/manual.html
-        node = node->next_sibling();
-    }
-
-    // Print to stream using operator <<
-    std::cout << doc;
-    // std::cout << doc.name;
-    // // Print to stream using print function, specifying printing flags
-    // print(std::cout, doc, 0); // 0 means default printing flags
-
-    // // Print to string using output iterator
-    // std::string s;
-    // print(std::back_inserter(s), doc, 0);
-
-    // // Print to memory buffer using output iterator
-    // char buffer[4096];                 // You are responsible for making the buffer large enough!
-    // char *end = print(buffer, doc, 0); // end contains pointer to character after last printed character
-    // *end = 0;                          // Add string terminator after XML
 
     // Initialize GDI+.
     GdiplusStartup(&gdiplusToken, &gdiplusStartupInput, NULL);
