@@ -1,41 +1,15 @@
 #include <iostream>
+#include <SDL2/SDL.h>
+#include "RectShape.h"
+#include "Circle.h"
+#include "rapidxml.hpp"
+#include <stdio.h>
 #include <fstream>
 #include <vector>
-#include "rapidxml.hpp"
-// #include <SDL.h>
-#include "SDL2/SDL.h"
+#include <string>
 
-class RectShape
+int main(int argc, char *argv[])
 {
-public:
-    float fillOpacity;
-    SDL_Color stroke;
-    int strokeWidth;
-    SDL_Rect rect;
-
-    RectShape(float fillOpacity, const SDL_Color &stroke, int strokeWidth, const SDL_Rect &rect)
-        : fillOpacity(fillOpacity), stroke(stroke), strokeWidth(strokeWidth), rect(rect) {}
-
-    void render(SDL_Renderer *renderer)
-    {
-        // Set fill color with opacity
-        SDL_SetRenderDrawColor(renderer, stroke.r, stroke.g, stroke.b, static_cast<Uint8>(fillOpacity * 255));
-
-        // Draw filled rectangle
-        SDL_RenderFillRect(renderer, &rect);
-
-        // Set stroke color
-        SDL_SetRenderDrawColor(renderer, stroke.r, stroke.g, stroke.b, 255);
-
-        // Draw rectangle border
-        SDL_RenderDrawRect(renderer, &rect);
-    }
-};
-
-int main()
-{
-    // SDL_Init(SDL_INIT_EVERYTHING);
-    // SDL_Window *window = SDL_CreateWindow("Hello SDL", SDL_WINDOWPOS_UNDEFINED);
     using namespace rapidxml;
 
     // Read XML
@@ -100,6 +74,26 @@ int main()
             // Render the RectShape object
             rect.render(renderer);
         }
+        // else if (std::string(nodeName) == "circle")
+        // {
+        //     // Parse attributes for <circle> node
+        //     float fillOpacity = std::stof(node->first_attribute("fill-opacity")->value());
+        //     SDL_Color fill = {255, 255, 0, 255}; // Default fill color
+        //     sscanf(node->first_attribute("fill")->value(), "rgb(%d,%d,%d)", &fill.r, &fill.g, &fill.b);
+        //     SDL_Color stroke = {0, 255, 255, 255}; // Default stroke color
+        //     sscanf(node->first_attribute("stroke")->value(), "rgb(%d,%d,%d)", &stroke.r, &stroke.g, &stroke.b);
+        //     int strokeWidth = std::stoi(node->first_attribute("stroke-width")->value());
+        //     float strokeOpacity = std::stof(node->first_attribute("stroke-opacity")->value());
+        //     int cx = std::stoi(node->first_attribute("cx")->value());
+        //     int cy = std::stoi(node->first_attribute("cy")->value());
+        //     int r = std::stoi(node->first_attribute("r")->value());
+
+        //     // Create Circle object
+        //     Circle circle(fillOpacity, fill, stroke, strokeWidth, strokeOpacity, {cx, cy}, r);
+
+        //     // Render the Circle object
+        //     circle.render(renderer);
+        // }
     }
 
     // Update the screen
