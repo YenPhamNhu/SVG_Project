@@ -91,7 +91,18 @@ VOID OnPaint(HDC hdc)
 
             delete[] polyPoints;
         }
+
         //Xử lý hình tròn
+        else if (strcmp(nodeName, "circle") == 0) {
+            int cx = atoi(node->first_attribute("cx")->value());
+            int cy = atoi(node->first_attribute("cy")->value());
+            int r = atoi(node->first_attribute("r")->value());
+
+            graphics.DrawEllipse(&pen, cx - r, cy - r, 2 * r, 2 * r);
+        }
+
+        //Xử lý hình vuông
+
 
         node = node->next_sibling();
     }
