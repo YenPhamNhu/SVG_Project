@@ -67,8 +67,30 @@ VOID OnPaint(HDC hdc)
             // Vẽ Line
             graphics.DrawLine(&pen, x1, y1, x2, y2);
         }
-        //Xử lý đa giác
 
+        //Xử lý đa giác
+        else if (strcmp(nodeName, "polygon") == 0) {
+            string pointsString = node->first_attribute("points")->value();
+            vector<int> points;
+            stringstream ss(pointsString);
+            int num;
+            while (ss >> num) {
+                points.push_back(num);
+                if (ss.peek() == ',' || ss.peek() == ' ')
+                    ss.ignore();
+            }
+
+            Point* polyPoints = new Point[points.size() / 2];
+            int index = 0;
+            for (size_t i = 0; i < points.size(); i += 2) {
+                polyPoints[index] = Point(points[i], points[i + 1]);
+                index++;
+            }
+
+            graphics.DrawPolygon(&pen, polyPoints, points.size() / 2);
+
+            delete[] polyPoints;
+        }
         //Xử lý hình tròn
 
         node = node->next_sibling();
