@@ -31,7 +31,19 @@ VOID OnPaint(HDC hdc)
         //Lấy tên của phần tử SVG
         char* nodeName = node->name();
 
-        //Xử lý Hình chữ nhật 
+        //Xử lý Hình chữ nhật
+        if (strcmp(nodeName, "rect") == 0) { 
+            //Trích xuất các thuộc tính cho hình chữ nhật
+            int x = atoi(node->first_attribute("x")->value());
+            int y = atoi(node->first_attribute("y")->value());
+            int width = atoi(node->first_attribute("width")->value());
+            int height = atoi(node->first_attribute("height")->value());
+
+            graphics.DrawRectangle(&pen, x, y, width, height);
+            graphics.DrawRectangle(&pen, x, y, width, height);
+
+ 
+        }
 
         //Xử lý hình Ellipse
 
@@ -42,7 +54,8 @@ VOID OnPaint(HDC hdc)
         //Xử lý đa giác
 
         //Xử lý hình tròn
-        break;
+
+        node = node->next_sibling();
     }
 }
 
