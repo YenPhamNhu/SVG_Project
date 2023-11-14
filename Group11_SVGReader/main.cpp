@@ -1,4 +1,4 @@
-#include "rapidxml/rapidxml.hpp"
+﻿#include "rapidxml/rapidxml.hpp"
 #include <windows.h>
 #include <objidl.h>
 #include <gdiplus.h>
@@ -13,6 +13,37 @@ VOID OnPaint(HDC hdc)
 {
     Graphics graphics(hdc);
     Pen      pen(Color(255, 0, 0, 255));
+
+    //Đọc và phân tích nội dung từ tệp SVG
+    xml_document<> doc;
+    xml_node<>* rootNode;
+    ifstream file("sample.svg");
+    vector<char> buffer((istreambuf_iterator<char>(file)), istreambuf_iterator<char>());
+    buffer.push_back('\0');
+    doc.parse<0>(&buffer[0]);
+
+    //Lấy node gốc của tài liệu SVG
+    rootNode = doc.first_node();
+    xml_node<>* node = rootNode->first_node();
+
+    //Lặp qua từng node
+    while (node != NULL) {
+        //Lấy tên của phần tử SVG
+        char* nodeName = node->name();
+
+        //Xử lý Hình chữ nhật 
+
+        //Xử lý hình Ellipse
+
+        //Xử lý văn bản
+
+        //Xử lý đường thẳng
+
+        //Xử lý đa giác
+
+        //Xử lý hình tròn
+        break;
+    }
 }
 
 LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
@@ -24,32 +55,6 @@ INT WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, PSTR, INT iCmdShow)
     WNDCLASS            wndClass;
     GdiplusStartupInput gdiplusStartupInput;
     ULONG_PTR           gdiplusToken;
-
-    // Read XML
-    xml_document<> doc;
-    xml_node<>* rootNode;
-    // Read the xml file into a vector
-    ifstream file("sample.svg");
-    vector<char> buffer((istreambuf_iterator<char>(file)), istreambuf_iterator<char>());
-    buffer.push_back('\0');
-    // Parse the buffer using the xml file parsing library into doc 
-    doc.parse<0>(&buffer[0]);
-
-    rootNode = doc.first_node();
-    xml_node<>* node = rootNode->first_node();
-
-    while (node != NULL) {
-        char* nodeName = node->name();
-        xml_attribute<>* firstAttribute = node->first_attribute();
-        char* attributeName = firstAttribute->name();
-        char* attributeValue = firstAttribute->value();
-        xml_attribute<>* secondAttribute = firstAttribute->next_attribute();
-        // Set breakpoint here to view value
-        // Ref: http://rapidxml.sourceforge.net/manual.html
-        node = node->next_sibling();
-    }
-
-
 
     // Initialize GDI+.
     GdiplusStartup(&gdiplusToken, &gdiplusStartupInput, NULL);
@@ -69,7 +74,7 @@ INT WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, PSTR, INT iCmdShow)
 
     hWnd = CreateWindow(
         TEXT("GettingStarted"),   // window class name
-        TEXT("SVG Demo"),  // window caption
+        TEXT("SVG Reader"),  // window caption
         WS_OVERLAPPEDWINDOW,      // window style
         CW_USEDEFAULT,            // initial x position
         CW_USEDEFAULT,            // initial y position
