@@ -89,9 +89,25 @@ VOID OnPaint(HDC hdc)
             int cy = atoi(node->first_attribute("cy")->value());
             int rx = atoi(node->first_attribute("rx")->value());
             int ry = atoi(node->first_attribute("ry")->value());
+            int strokeWidth = atoi(node->first_attribute("stroke-width")->value());
+
+            string strokeColor = node->first_attribute("stroke")->value();
+            int red, green, blue;
+            sscanf_s(strokeColor.c_str(), "rgb(%d,%d,%d)", &red, &green, &blue);
+            Color stroke(red, green, blue);
+            Pen pen(stroke, strokeWidth);
+
+            string fillColor = node->first_attribute("fill")->value();
+            sscanf_s(fillColor.c_str(), "rgb(%d,%d,%d)", &red, &green, &blue);
+            Color fill(red, green, blue);
+            SolidBrush brush(fill);
+
+            float strokeOpacity = stof(node->first_attribute("stroke-opacity")->value());
+            float fillOpacity = stof(node->first_attribute("fill-opacity")->value());
 
             // Vẽ Ellipse
             graphics.DrawEllipse(&pen, cx - rx, cy - ry, 2 * rx, 2 * ry);
+            graphics.FillEllipse(&brush, cx - rx, cy - ry, 2 * rx, 2 * ry);
         }
         //Xử lý văn bản
 
