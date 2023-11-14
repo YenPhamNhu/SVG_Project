@@ -34,14 +34,52 @@ VOID OnPaint(HDC hdc)
         char* nodeName = node->name();
 
         //Xử lý Hình chữ nhật
-        if (strcmp(nodeName, "rect") == 0) { 
+        if (strcmp(nodeName, "rect") == 0) { //Hình chữ nhật
             //Trích xuất các thuộc tính cho hình chữ nhật
             int x = atoi(node->first_attribute("x")->value());
             int y = atoi(node->first_attribute("y")->value());
             int width = atoi(node->first_attribute("width")->value());
             int height = atoi(node->first_attribute("height")->value());
+            int red, green, blue;
+            int red1, green1, blue1;
 
-            graphics.DrawRectangle(&pen, x, y, width, height);
+            //Kiểm tra màu fill và vẽ hình chữ nhật đã tô màu
+            if (node->first_attribute("fill")) {
+                string fillColor = node->first_attribute("fill")->value();
+                sscanf_s(fillColor.c_str(), "rgb(%d,%d,%d)", &red, &green, &blue);
+
+                //Xử lý màu fill và vẽ hình chữ nhật
+                if (node->first_attribute("fill-opacity") != NULL) { //Tô màu viền
+                    Color semiTransparentColor(50, red, green, blue);
+
+                    SolidBrush brush(semiTransparentColor);
+                    graphics.FillRectangle(&brush, x, y, width, height);
+                }
+                else {
+                    Color fill(red, green, blue);
+                    SolidBrush brush(fill);
+                    graphics.FillRectangle(&brush, x, y, width, height);
+                }
+            }
+
+            //Kiểm tra viền và vẽ hình chữ nhật có viền
+            if (node->first_attribute("stroke") != NULL) {
+                string strokeColor = node->first_attribute("stroke")->value();
+                sscanf_s(strokeColor.c_str(), "rgb(%d,%d,%d)", &red1, &green1, &blue1);
+                int strokeWidth = atoi(node->first_attribute("stroke-width")->value());
+                if (node->first_attribute("stroke-opacity") != NULL) {
+                    Color strokeC(50, red1, green1, blue1);
+
+                    Pen transparentPen(Color(strokeC.GetA(), strokeC.GetR(), strokeC.GetG(), strokeC.GetB()), strokeWidth);
+
+                    graphics.DrawRectangle(&transparentPen, x, y, width, height);
+                }
+                else {
+                    Color stroke(red1, green1, blue1);
+                    Pen pen(stroke, strokeWidth);
+                    graphics.DrawRectangle(&pen, x, y, width, height);
+                }
+            }
         }
 
         //Xử lý hình Ellipse
