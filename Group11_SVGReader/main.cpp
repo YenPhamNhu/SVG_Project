@@ -171,8 +171,23 @@ VOID OnPaint(HDC hdc)
             int cy = atoi(node->first_attribute("cy")->value());
             int r = atoi(node->first_attribute("r")->value());
 
+
+            int strokeWidth = atoi(node->first_attribute("stroke-width")->value());
+
+            string strokeColor = node->first_attribute("stroke")->value();
+            int red, green, blue;
+            sscanf_s(strokeColor.c_str(), "rgb(%d,%d,%d)", &red, &green, &blue);
+            Color stroke(red, green, blue);
+            Pen pen(stroke, strokeWidth);
+
+            string fillColor = node->first_attribute("fill")->value();
+            sscanf_s(fillColor.c_str(), "rgb(%d,%d,%d)", &red, &green, &blue);
+            Color fill(red, green, blue);
+            SolidBrush brush(fill);
+
             graphics.DrawEllipse(&pen, cx - r, cy - r, 2 * r, 2 * r);
-        }
+            graphics.FillEllipse(&brush, cx - r, cy - r, 2 * r, 2 * r);
+            }
 
         //Xử lý hình vuông
         else if (strcmp(nodeName, "square") == 0) {
