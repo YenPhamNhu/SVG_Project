@@ -4,6 +4,8 @@
 #include <gdiplus.h>
 #include <vector>
 #include <fstream>
+#include <sstream>
+#include <iostream>
 using namespace std;
 using namespace rapidxml;
 using namespace Gdiplus;
@@ -40,13 +42,19 @@ VOID OnPaint(HDC hdc)
             int height = atoi(node->first_attribute("height")->value());
 
             graphics.DrawRectangle(&pen, x, y, width, height);
-            graphics.DrawRectangle(&pen, x, y, width, height);
-
- 
         }
 
         //Xử lý hình Ellipse
+        else if (strcmp(nodeName, "ellipse") == 0) {
+            //Trích xuất các thuộc tính 
+            int cx = atoi(node->first_attribute("cx")->value());
+            int cy = atoi(node->first_attribute("cy")->value());
+            int rx = atoi(node->first_attribute("rx")->value());
+            int ry = atoi(node->first_attribute("ry")->value());
 
+            // Vẽ Ellipse
+            graphics.DrawEllipse(&pen, cx - rx, cy - ry, 2 * rx, 2 * ry);
+        }
         //Xử lý văn bản
 
         //Xử lý đường thẳng

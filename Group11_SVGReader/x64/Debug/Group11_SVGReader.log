@@ -1,9 +1,3 @@
 ﻿  main.cpp
-D:\HK1 2023-2024\OOP\SVG_Project\Group11_SVGReader\main.cpp(42,17): warning C4101: 'red1': unreferenced local variable
-D:\HK1 2023-2024\OOP\SVG_Project\Group11_SVGReader\main.cpp(41,17): warning C4101: 'red': unreferenced local variable
-D:\HK1 2023-2024\OOP\SVG_Project\Group11_SVGReader\main.cpp(42,23): warning C4101: 'green1': unreferenced local variable
-D:\HK1 2023-2024\OOP\SVG_Project\Group11_SVGReader\main.cpp(42,31): warning C4101: 'blue1': unreferenced local variable
-D:\HK1 2023-2024\OOP\SVG_Project\Group11_SVGReader\main.cpp(41,29): warning C4101: 'blue': unreferenced local variable
-D:\HK1 2023-2024\OOP\SVG_Project\Group11_SVGReader\main.cpp(41,22): warning C4101: 'green': unreferenced local variable
-D:\HK1 2023-2024\OOP\SVG_Project\Group11_SVGReader\main.cpp(149,15): warning C4244: 'return': conversion from 'WPARAM' to 'int', possible loss of data
+D:\HK1 2023-2024\OOP\SVG_Project\Group11_SVGReader\main.cpp(119,15): warning C4244: 'return': conversion from 'WPARAM' to 'int', possible loss of data
   Group11_SVGReader.vcxproj -> D:\HK1 2023-2024\OOP\SVG_Project\x64\Debug\Group11_SVGReader.exe
