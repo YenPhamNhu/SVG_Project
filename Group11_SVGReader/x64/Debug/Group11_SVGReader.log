@@ -1,3 +1,3 @@
 ﻿  main.cpp
-D:\HK1 2023-2024\OOP\SVG_Project\Group11_SVGReader\main.cpp(119,15): warning C4244: 'return': conversion from 'WPARAM' to 'int', possible loss of data
+D:\HK1 2023-2024\OOP\SVG_Project\Group11_SVGReader\main.cpp(127,15): warning C4244: 'return': conversion from 'WPARAM' to 'int', possible loss of data
   Group11_SVGReader.vcxproj -> D:\HK1 2023-2024\OOP\SVG_Project\x64\Debug\Group11_SVGReader.exe

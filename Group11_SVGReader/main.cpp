@@ -58,7 +58,15 @@ VOID OnPaint(HDC hdc)
         //Xử lý văn bản
 
         //Xử lý đường thẳng
+        else if (strcmp(nodeName, "line") == 0) {
+            int x1 = atoi(node->first_attribute("x1")->value());
+            int y1 = atoi(node->first_attribute("y1")->value());
+            int x2 = atoi(node->first_attribute("x2")->value());
+            int y2 = atoi(node->first_attribute("y2")->value());
 
+            // Vẽ Line
+            graphics.DrawLine(&pen, x1, y1, x2, y2);
+        }
         //Xử lý đa giác
 
         //Xử lý hình tròn
