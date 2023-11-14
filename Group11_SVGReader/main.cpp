@@ -134,6 +134,25 @@ VOID OnPaint(HDC hdc)
                     ss.ignore();
             }
 
+            int strokeWidth = atoi(node->first_attribute("stroke-width")->value());
+
+            string strokeColor = node->first_attribute("stroke")->value();
+            int red, green, blue;
+            sscanf_s(strokeColor.c_str(), "rgb(%d,%d,%d)", &red, &green, &blue);
+            Color stroke(red, green, blue);
+            Pen pen(stroke, strokeWidth);
+
+            string fillColor = node->first_attribute("fill")->value();
+            sscanf_s(fillColor.c_str(), "rgb(%d,%d,%d)", &red, &green, &blue);
+            Color fill(red, green, blue);
+            SolidBrush brush(fill);
+            //float fillOpacity = stof(node->first_attribute("fill-opacity")->value());
+
+            //SolidBrush brush(Color(fill.GetR(), fill.GetG(), fill.GetB(), (int)(fillOpacity * 255)));
+
+            float strokeOpacity = stof(node->first_attribute("stroke-opacity")->value());
+
+
             Point* polyPoints = new Point[points.size() / 2];
             int index = 0;
             for (size_t i = 0; i < points.size(); i += 2) {
@@ -142,7 +161,7 @@ VOID OnPaint(HDC hdc)
             }
 
             graphics.DrawPolygon(&pen, polyPoints, points.size() / 2);
-
+            graphics.FillPolygon(&brush, polyPoints, points.size() / 2);
             delete[] polyPoints;
         }
 

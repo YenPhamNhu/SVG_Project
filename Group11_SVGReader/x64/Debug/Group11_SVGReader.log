@@ -2,6 +2,8 @@
 D:\HK1 2023-2024\OOP\SVG_Project\Group11_SVGReader\main.cpp(73,111): warning C4244: 'argument': conversion from 'int' to 'Gdiplus::REAL', possible loss of data
 D:\HK1 2023-2024\OOP\SVG_Project\Group11_SVGReader\main.cpp(79,37): warning C4244: 'argument': conversion from 'int' to 'Gdiplus::REAL', possible loss of data
 D:\HK1 2023-2024\OOP\SVG_Project\Group11_SVGReader\main.cpp(98,29): warning C4244: 'argument': conversion from 'int' to 'Gdiplus::REAL', possible loss of data
-D:\HK1 2023-2024\OOP\SVG_Project\Group11_SVGReader\main.cpp(144,66): warning C4267: 'argument': conversion from 'size_t' to 'INT', possible loss of data
-D:\HK1 2023-2024\OOP\SVG_Project\Group11_SVGReader\main.cpp(220,15): warning C4244: 'return': conversion from 'WPARAM' to 'int', possible loss of data
+D:\HK1 2023-2024\OOP\SVG_Project\Group11_SVGReader\main.cpp(143,29): warning C4244: 'argument': conversion from 'int' to 'Gdiplus::REAL', possible loss of data
+D:\HK1 2023-2024\OOP\SVG_Project\Group11_SVGReader\main.cpp(163,66): warning C4267: 'argument': conversion from 'size_t' to 'INT', possible loss of data
+D:\HK1 2023-2024\OOP\SVG_Project\Group11_SVGReader\main.cpp(164,68): warning C4267: 'argument': conversion from 'size_t' to 'INT', possible loss of data
+D:\HK1 2023-2024\OOP\SVG_Project\Group11_SVGReader\main.cpp(239,15): warning C4244: 'return': conversion from 'WPARAM' to 'int', possible loss of data
   Group11_SVGReader.vcxproj -> D:\HK1 2023-2024\OOP\SVG_Project\x64\Debug\Group11_SVGReader.exe
