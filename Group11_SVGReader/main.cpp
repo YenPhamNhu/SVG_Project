@@ -102,7 +102,13 @@ VOID OnPaint(HDC hdc)
         }
 
         //Xử lý hình vuông
+        else if (strcmp(nodeName, "square") == 0) {
+            int x = atoi(node->first_attribute("x")->value());
+            int y = atoi(node->first_attribute("y")->value());
+            int sideLength = atoi(node->first_attribute("sideLength")->value());
 
+            graphics.DrawRectangle(&pen, x, y, sideLength, sideLength);
+        }
 
         node = node->next_sibling();
     }
