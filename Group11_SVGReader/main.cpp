@@ -1,11 +1,13 @@
 ﻿#include "rapidxml/rapidxml.hpp"
-#include <windows.h>
 #include <objidl.h>
+#include <windows.h>
 #include <gdiplus.h>
 #include <vector>
 #include <fstream>
 #include <sstream>
 #include <iostream>
+#include <wingdi.h>
+
 using namespace std;
 using namespace rapidxml;
 using namespace Gdiplus;
@@ -109,7 +111,51 @@ VOID OnPaint(HDC hdc)
             graphics.DrawEllipse(&pen, cx - rx, cy - ry, 2 * rx, 2 * ry);
             graphics.FillEllipse(&brush, cx - rx, cy - ry, 2 * rx, 2 * ry);
         }
-        //Xử lý văn bản
+
+        // Xử lý văn bản
+        else if (strcmp(nodeName, "text") == 0) {
+            // Lấy thông tin về vị trí và nội dung của văn bản
+            int x = atoi(node->first_attribute("x")->value());
+            int y = atoi(node->first_attribute("y")->value());
+            string textContent = node->value();
+
+            // Xác định màu sắc của văn bản
+            int red, green, blue;
+            if (node->first_attribute("fill")) {
+                string textColor = node->first_attribute("fill")->value();
+                sscanf_s(textColor.c_str(), "rgb(%d,%d,%d)", &red, &green, &blue);
+            }
+            else {
+                // Mặc định màu đen nếu không có thuộc tính fill
+                red = green = blue = 0;
+            }
+
+            // Tạo đối tượng màu sắc và brush cho văn bản
+            Color textFill(red, green, blue);
+            SolidBrush textBrush(textFill);
+
+            // Font
+            FontFamily fontFamily(L"Times New Roman");
+            FontStyle fontStyle = FontStyleRegular;
+            int fontSize = 12;
+
+
+            // Kiểm tra và thiết lập kích thước font nếu có thuộc tính font-size
+            if (node->first_attribute("font-size")) {
+                fontSize = atoi(node->first_attribute("font-size")->value());
+            }
+
+            // Chuyển đổi kiểu dữ liệu chuỗi
+            wstring textContentWide(textContent.begin(), textContent.end());
+            const WCHAR* wideText = textContentWide.c_str();
+
+            // Tạo đối tượng font
+            Font font(&fontFamily, fontSize, fontStyle, UnitPixel);
+
+            // Vẽ văn bản
+            graphics.DrawString(wideText, -1, &font, PointF(x, y-35), &textBrush);
+        }
+
 
         //Xử lý đường thẳng
         else if (strcmp(nodeName, "line") == 0) {
@@ -187,7 +233,7 @@ VOID OnPaint(HDC hdc)
 
             graphics.DrawEllipse(&pen, cx - r, cy - r, 2 * r, 2 * r);
             graphics.FillEllipse(&brush, cx - r, cy - r, 2 * r, 2 * r);
-            }
+         }
 
         //Xử lý hình vuông
         else if (strcmp(nodeName, "square") == 0) {
