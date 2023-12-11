@@ -1,9 +1,12 @@
 ﻿  stdafx.cpp
   CircleShape.cpp
   EllipseShape.cpp
+  LineShape.cpp
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\LineShape.cpp(11,41): warning C4244: 'argument': conversion from 'float' to 'BYTE', possible loss of data
   PolygonShape.cpp
   RectangleShape.cpp
   Shape.cpp
   SVGDemo.cpp
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\SVGDemo.cpp(172,41): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
   Generating Code...
   SVGDemo.vcxproj -> E:\Downloads\CSC10003\Team_Project\SVG_Project\x64\Debug\SVGDemo.exe
