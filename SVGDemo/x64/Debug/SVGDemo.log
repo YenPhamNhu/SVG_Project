@@ -1,14 +1,2 @@
-﻿  stdafx.cpp
-  CircleShape.cpp
-  EllipseShape.cpp
-  LineShape.cpp
-  PolygonShape.cpp
-  PolylineShape.cpp
-  RectangleShape.cpp
-  Shape.cpp
-  SVGDemo.cpp
-E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\SVGDemo.cpp(173,41): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\SVGDemo.cpp(198,41): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\SVGDemo.cpp(200,39): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-  Generating Code...
+﻿  TextShape.cpp
   SVGDemo.vcxproj -> E:\Downloads\CSC10003\Team_Project\SVG_Project\x64\Debug\SVGDemo.exe
