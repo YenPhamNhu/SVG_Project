@@ -1,0 +1,8 @@
+﻿  stdafx.cpp
+  CircleShape.cpp
+  EllipseShape.cpp
+  RectangleShape.cpp
+  Shape.cpp
+  SVGDemo.cpp
+  Generating Code...
+  SVGDemo.vcxproj -> E:\Downloads\CSC10003\Team_Project\SVG_Project\x64\Debug\SVGDemo.exe
