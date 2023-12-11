@@ -1,6 +1,7 @@
 ﻿  stdafx.cpp
   CircleShape.cpp
   EllipseShape.cpp
+  PolygonShape.cpp
   RectangleShape.cpp
   Shape.cpp
   SVGDemo.cpp

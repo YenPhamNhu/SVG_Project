@@ -149,6 +149,7 @@
   <ItemGroup>
     <ClInclude Include="CircleShape.h" />
     <ClInclude Include="EllipseShape.h" />
+    <ClInclude Include="PolygonShape.h" />
     <ClInclude Include="rapidxml.hpp" />
     <ClInclude Include="RectangleShape.h" />
     <ClInclude Include="resource.h" />
@@ -160,6 +161,7 @@
   <ItemGroup>
     <ClCompile Include="CircleShape.cpp" />
     <ClCompile Include="EllipseShape.cpp" />
+    <ClCompile Include="PolygonShape.cpp" />
     <ClCompile Include="RectangleShape.cpp" />
     <ClCompile Include="Shape.cpp" />
     <ClCompile Include="stdafx.cpp">
