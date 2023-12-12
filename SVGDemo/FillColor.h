@@ -16,15 +16,7 @@
 #include <gdiplus.h>
 #include <vector>
 #include <fstream>
-//#include "RectangleShape.h"
-//#include "EllipseShape.h"
-//#include "CircleShape.h"
-//#include "PolygonShape.h"
-//#include "LineShape.h"
-//#include "PolylineShape.h"
-//#include "TextShape.h"
-//using namespace std;
-//using namespace rapidxml;
+
 using namespace Gdiplus;
 #pragma comment (lib,"Gdiplus.lib")
 

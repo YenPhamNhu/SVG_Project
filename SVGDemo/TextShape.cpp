@@ -15,7 +15,7 @@ TextShape::TextShape(int x, int y, const std::string& fill, int fontSize)
 void TextShape::Draw(Gdiplus::Graphics& graphics) {
     Gdiplus::Font font(L"Arial", static_cast<float>(fontSize_));
     Gdiplus::SolidBrush brush(fill_);
-
+    
     Gdiplus::PointF point(static_cast<float>(x_), static_cast<float>(y_));
-    graphics.DrawString(L"Nguyen Van A", -1, &font, point, &brush);
+    graphics.DrawString(L"Text", -1, &font, point, &brush);
 }
