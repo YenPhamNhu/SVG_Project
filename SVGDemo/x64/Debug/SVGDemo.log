@@ -8,9 +8,10 @@
   RectangleShape.cpp
   Shape.cpp
   SVGDemo.cpp
-E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\SVGDemo.cpp(207,41): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\SVGDemo.cpp(232,41): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\SVGDemo.cpp(234,39): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\SVGDemo.cpp(95,43): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\SVGDemo.cpp(235,41): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\SVGDemo.cpp(260,41): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\SVGDemo.cpp(262,39): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
   TextShape.cpp
   Generating Code...
   SVGDemo.vcxproj -> E:\Downloads\CSC10003\Team_Project\SVG_Project\x64\Debug\SVGDemo.exe
