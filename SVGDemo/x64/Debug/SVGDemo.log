@@ -10,9 +10,9 @@
   SVGDemo.cpp
 E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\SVGDemo.cpp(97,43): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
 E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\SVGDemo.cpp(113,45): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\SVGDemo.cpp(261,41): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\SVGDemo.cpp(286,41): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\SVGDemo.cpp(288,39): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\SVGDemo.cpp(283,41): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\SVGDemo.cpp(308,41): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\SVGDemo.cpp(310,39): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
   TextShape.cpp
   Generating Code...
   SVGDemo.vcxproj -> E:\Downloads\CSC10003\Team_Project\SVG_Project\x64\Debug\SVGDemo.exe
