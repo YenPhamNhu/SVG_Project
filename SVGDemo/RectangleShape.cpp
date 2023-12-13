@@ -16,6 +16,7 @@ RectangleShape::RectangleShape(int x, int y, int width, int height, int strokeWi
 
 void RectangleShape::Draw(Gdiplus::Graphics& graphics) {
     Gdiplus::Pen pen(strokeColor, strokeWidth * strokeOpacity);
+    //Gdiplus::Pen pen(Color(255, 0, 0, 255));
     Gdiplus::SolidBrush brush(fillColor);
 
     graphics.DrawRectangle(&pen, x, y, width, height);
