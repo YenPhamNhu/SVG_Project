@@ -9,7 +9,7 @@
 class PolylineShape : public Shape {
 public:
     PolylineShape(const std::string& points, const std::string& stroke, int strokeWidth, float strokeOpacity, const std::string& fill, float fillOpacity);
-    void Draw(Gdiplus::Graphics& graphics) override;
+    void Draw(Gdiplus::Graphics& graphics, xml_node<>* node) override;
 
 private:
     std::vector<Gdiplus::Point> points_;

@@ -3,11 +3,24 @@
 
 #include "Shape.h"
 #include <string>
+#include "rapidxml.hpp"
+#include <windows.h>
+#include <objidl.h>
+#include <string>    
+#include <sstream> 
+#include <gdiplus.h>
+#include <vector>
+#include <fstream>
+#include "FillColor.h"
+
+using namespace std;
+using namespace rapidxml;
+using namespace Gdiplus;
 
 class TextShape : public Shape {
 public:
-    TextShape(int x, int y, const std::string& fill, int fontSize);
-    void Draw(Gdiplus::Graphics& graphics) override;
+    TextShape();
+    void Draw(Gdiplus::Graphics& graphics, xml_node<>* node) override;
 
 private:
     int x_;

@@ -34,7 +34,7 @@ PolylineShape::PolylineShape(const std::string& points, const std::string& strok
     fill_ = Gdiplus::Color(r, g, b);
 }
 
-void PolylineShape::Draw(Gdiplus::Graphics& graphics) {
+void PolylineShape::Draw(Gdiplus::Graphics& graphics, xml_node<>* node) {
     Gdiplus::Pen pen(stroke_, strokeWidth_ * strokeOpacity_);
     Gdiplus::SolidBrush brush(Gdiplus::Color(static_cast<BYTE>(fill_.GetA() * fillOpacity_), fill_.GetR(), fill_.GetG(), fill_.GetB()));
 

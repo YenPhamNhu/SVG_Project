@@ -1,14 +1,62 @@
-#include "stdafx.h"
+﻿#include "stdafx.h"
 #include "LineShape.h"
 #include <gdiplus.h>
 #include <gdiplusgraphics.h>
 #include <string>
 
-LineShape::LineShape(int x1, int y1, int x2, int y2, const std::string& stroke, int strokeWidth, float strokeOpacity)
-    : x1_(x1), y1_(y1), x2_(x2), y2_(y2), stroke_(stroke), strokeWidth_(strokeWidth), strokeOpacity_(strokeOpacity) {}
+LineShape::LineShape()
+ {}
 
-void LineShape::Draw(Graphics& graphics) {
-    Gdiplus::Pen pen(Gdiplus::Color(static_cast<BYTE>(255 * strokeOpacity_), static_cast<BYTE>(stroke_[0]), static_cast<BYTE>(stroke_[1]), static_cast<BYTE>(stroke_[2])), static_cast<float>(strokeWidth_));
+void LineShape::Draw(Graphics& graphics, xml_node<>* node) {
 
-    graphics.DrawLine(&pen, static_cast<float>(x1_), static_cast<float>(y1_), static_cast<float>(x2_), static_cast<float>(y2_));
+
+        xml_attribute<>* x1Attribute = node->first_attribute("x1");
+        xml_attribute<>* y1Attribute = node->first_attribute("y1");
+        xml_attribute<>* x2Attribute = node->first_attribute("x2");
+        xml_attribute<>* y2Attribute = node->first_attribute("y2");
+        xml_attribute<>* strokeAttribute = node->first_attribute("stroke");
+        xml_attribute<>* strokeWidthAttribute = node->first_attribute("stroke-width");
+        xml_attribute<>* strokeOpacityAttribute = node->first_attribute("stroke-opacity");
+
+    // Check if attributes are found before accessing their values
+    
+        // Convert attribute values to integers
+        int x1 = atoi(x1Attribute->value());
+        int y1 = atoi(y1Attribute->value());
+        int x2 = atoi(x2Attribute->value());
+        int y2 = atoi(y2Attribute->value());
+
+        // Convert stroke width and opacity values
+        int strokeWidth = atoi(strokeWidthAttribute->value());
+        float strokeOpacity = strtof(strokeOpacityAttribute->value(), nullptr);
+
+        int red, green, blue;
+        int red1, green1, blue1;
+
+        
+
+        if (node->first_attribute("stroke") != NULL) {
+            string strokeColor = node->first_attribute("stroke")->value();
+            sscanf_s(strokeColor.c_str(), "rgb(%d,%d,%d)", &red1, &green1, &blue1);
+            int strokeWidth = atoi(node->first_attribute("stroke-width")->value());
+            if (node->first_attribute("stroke-opacity") != NULL) {
+                Color strokeC(50, red1, green1, blue1);
+
+                Pen transparentPen(Color(strokeC.GetA(), strokeC.GetR(), strokeC.GetG(), strokeC.GetB()), strokeWidth);
+
+                graphics.DrawLine(&transparentPen, x1, y1, x2, y2);
+            }
+            else {
+                Color stroke(red1, green1, blue1);
+                Pen pen(stroke, strokeWidth);
+                graphics.DrawLine(&pen, x1, y1, x2, y2);
+            }
+        }
+
+
+        // Vẽ Line
+        //graphics.DrawLine(&pen, x1, y1, x2, y2);
+
+
+    
 }

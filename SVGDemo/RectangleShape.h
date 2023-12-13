@@ -1,4 +1,4 @@
-#ifndef RECTANGLESHAPE_H
+﻿#ifndef RECTANGLESHAPE_H
 #define RECTANGLESHAPE_H
 
 #include "Shape.h"
@@ -8,9 +8,9 @@
 
 class RectangleShape : public FillColor, public Shape {
 public:
-    RectangleShape(int x, int y, int width, int height, int strokeWidth, Gdiplus::Color strokeColor, Gdiplus::Color fillColor, float strokeOpacity, float fillOpacity);
+    RectangleShape();
 
-    void Draw(Gdiplus::Graphics& graphics) override;
+    void Draw(Gdiplus::Graphics& graphics, xml_node<>* node) override;
 
 private:
     int x;

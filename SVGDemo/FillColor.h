@@ -16,13 +16,24 @@
 #include <gdiplus.h>
 #include <vector>
 #include <fstream>
+#include <string.h>    
+
 
 using namespace Gdiplus;
+using namespace std;
 #pragma comment (lib,"Gdiplus.lib")
+
+struct struct_color {
+    int red;
+    int blue;
+    int green;
+};
 
 class FillColor {
 public:
+    FillColor();
     FillColor(int strokeWidth, Gdiplus::Color strokeColor, Gdiplus::Color fillColor, float strokeOpacity, float fillOpacity);
+    struct_color parseColor(std::string colorName);
 
 protected:
     int strokeWidth;

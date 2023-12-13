@@ -1,15 +1,20 @@
 #ifndef CIRCLESHAPE_H
 #define CIRCLESHAPE_H
 
-#include "EllipseShape.h"
+#include "Shape.h"
+#include "FillColor.h"
 #include <windows.h>
 #include <gdiplus.h>
 
-class CircleShape : public EllipseShape {
-public:
-    CircleShape(int cx, int cy, int r, Gdiplus::Color strokeColor, int strokeWidth, Gdiplus::Color fillColor, float strokeOpacity, float fillOpacity);
+using namespace std;
+using namespace rapidxml;
+using namespace Gdiplus;
 
-    void Draw(Gdiplus::Graphics& graphics) override;
+class CircleShape : public Shape {
+public:
+    CircleShape();
+
+    void Draw(Gdiplus::Graphics& graphics, xml_node<>* node) override;
 };
 
 #endif

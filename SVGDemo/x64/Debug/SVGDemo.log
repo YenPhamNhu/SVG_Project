@@ -1,2 +1,7 @@
-﻿  SVGDemo.cpp
-  SVGDemo.vcxproj -> D:\SVG_Project\x64\Debug\SVGDemo.exe
+﻿  TextShape.cpp
+D:\SVG_Project\SVGDemo\TextShape.cpp(49,54): error C2248: 'Gdiplus::FontFamily::operator =': cannot access private member declared in class 'Gdiplus::FontFamily'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\GdiplusHeaders.h(230): message : see declaration of 'Gdiplus::FontFamily::operator ='
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\GdiplusHeaders.h(186): message : see declaration of 'Gdiplus::FontFamily'
+D:\SVG_Project\SVGDemo\TextShape.cpp(68,28): warning C4244: 'argument': conversion from 'int' to 'Gdiplus::REAL', possible loss of data
+D:\SVG_Project\SVGDemo\TextShape.cpp(71,58): warning C4244: 'argument': conversion from 'int' to 'Gdiplus::REAL', possible loss of data
+D:\SVG_Project\SVGDemo\TextShape.cpp(71,53): warning C4244: 'argument': conversion from 'int' to 'Gdiplus::REAL', possible loss of data

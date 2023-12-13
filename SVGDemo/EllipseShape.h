@@ -8,9 +8,9 @@
 
 class EllipseShape : public FillColor, public Shape {
 public:
-    EllipseShape(int cx, int cy, int rx, int ry, Gdiplus::Color strokeColor, int strokeWidth, Gdiplus::Color fillColor, float strokeOpacity, float fillOpacity);
+    EllipseShape();
 
-    void Draw(Gdiplus::Graphics& graphics) override;
+    void Draw(Gdiplus::Graphics& graphics, xml_node<>* node) override;
 
 private:
     int cx;
