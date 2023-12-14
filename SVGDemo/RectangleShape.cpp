@@ -18,8 +18,8 @@ void RectangleShape::Draw(Gdiplus::Graphics& graphics, xml_node<>* node) {
     int y = atoi(node->first_attribute("y")->value());
     int width = atoi(node->first_attribute("width")->value());
     int height = atoi(node->first_attribute("height")->value());
-    int red, green, blue;
-    int red1, green1, blue1;
+    int red1 = 0, green1 = 0, blue1 = 0;
+    int red = 0, green = 0, blue = 0;
 
     //Kiểm tra màu fill và vẽ hình chữ nhật đã tô màu
     if (node->first_attribute("fill")) {

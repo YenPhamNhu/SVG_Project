@@ -30,8 +30,8 @@ void LineShape::Draw(Graphics& graphics, xml_node<>* node) {
         int strokeWidth = atoi(strokeWidthAttribute->value());
         float strokeOpacity = strtof(strokeOpacityAttribute->value(), nullptr);
 
-        int red, green, blue;
-        int red1, green1, blue1;
+        int red1 = 0, green1 = 0, blue1 = 0;
+        int red = 0, green = 0, blue = 0;
 
         
 

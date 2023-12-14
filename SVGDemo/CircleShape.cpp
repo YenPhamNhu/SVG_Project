@@ -17,8 +17,10 @@ void CircleShape::Draw(Gdiplus::Graphics& graphics, xml_node<>* node) {
     int cy = atoi(cyAttribute->value());
     int r = atoi(rAttribute->value());
 
-    int red, green, blue;
-    int red1, green1, blue1;
+    /*int red, green, blue;
+    int red1, green1, blue1;*/
+    int red1 = 0, green1 = 0, blue1 = 0;
+    int red = 0, green = 0, blue = 0;
 
     if (node->first_attribute("fill")) {
         string fillColor = node->first_attribute("fill")->value();

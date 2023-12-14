@@ -6,7 +6,7 @@
 #include <windows.h>
 #include <gdiplus.h>
 
-class EllipseShape : public FillColor, public Shape {
+class EllipseShape : public Shape {
 public:
     EllipseShape();
 

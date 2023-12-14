@@ -1,1 +1,12 @@
-﻿  SVGDemo.vcxproj -> D:\Study\HOC KY 1 - 2023-20234\OOP\SVG_Project\SVG_Project\x64\Debug\SVGDemo.exe
+﻿  SVGDemo.cpp
+D:\Study\HOC KY 1 - 2023-20234\OOP\SVG_Project\SVG_Project\SVGDemo\SVGDemo.cpp(171,79): warning C4267: 'argument': conversion from 'size_t' to 'INT', possible loss of data
+D:\Study\HOC KY 1 - 2023-20234\OOP\SVG_Project\SVG_Project\SVGDemo\SVGDemo.cpp(176,79): warning C4267: 'argument': conversion from 'size_t' to 'INT', possible loss of data
+D:\Study\HOC KY 1 - 2023-20234\OOP\SVG_Project\SVG_Project\SVGDemo\SVGDemo.cpp(188,111): warning C4244: 'argument': conversion from 'int' to 'Gdiplus::REAL', possible loss of data
+D:\Study\HOC KY 1 - 2023-20234\OOP\SVG_Project\SVG_Project\SVGDemo\SVGDemo.cpp(190,88): warning C4267: 'argument': conversion from 'size_t' to 'INT', possible loss of data
+D:\Study\HOC KY 1 - 2023-20234\OOP\SVG_Project\SVG_Project\SVGDemo\SVGDemo.cpp(194,37): warning C4244: 'argument': conversion from 'int' to 'Gdiplus::REAL', possible loss of data
+D:\Study\HOC KY 1 - 2023-20234\OOP\SVG_Project\SVG_Project\SVGDemo\SVGDemo.cpp(195,77): warning C4267: 'argument': conversion from 'size_t' to 'INT', possible loss of data
+D:\Study\HOC KY 1 - 2023-20234\OOP\SVG_Project\SVG_Project\SVGDemo\SVGDemo.cpp(246,40): warning C4244: 'argument': conversion from 'int' to 'Gdiplus::REAL', possible loss of data
+D:\Study\HOC KY 1 - 2023-20234\OOP\SVG_Project\SVG_Project\SVGDemo\SVGDemo.cpp(247,70): warning C4244: 'argument': conversion from 'int' to 'Gdiplus::REAL', possible loss of data
+D:\Study\HOC KY 1 - 2023-20234\OOP\SVG_Project\SVG_Project\SVGDemo\SVGDemo.cpp(247,65): warning C4244: 'argument': conversion from 'int' to 'Gdiplus::REAL', possible loss of data
+D:\Study\HOC KY 1 - 2023-20234\OOP\SVG_Project\SVG_Project\SVGDemo\SVGDemo.cpp(345,15): warning C4244: 'return': conversion from 'WPARAM' to 'int', possible loss of data
+  SVGDemo.vcxproj -> D:\Study\HOC KY 1 - 2023-20234\OOP\SVG_Project\SVG_Project\x64\Debug\SVGDemo.exe

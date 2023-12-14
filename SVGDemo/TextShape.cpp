@@ -11,8 +11,8 @@ void TextShape::Draw(Gdiplus::Graphics& graphics, xml_node<>* node) {
     int x = atoi(node->first_attribute("x")->value());
     int y = atoi(node->first_attribute("y")->value());
     string textContent = node->value();
-    int red, green, blue;
-    int red1, green1, blue1;
+    int red1 = 0, green1 = 0, blue1 = 0;
+    int red = 0, green = 0, blue = 0;
 
     // Xác định màu sắc của văn bản
     if (node->first_attribute("fill")) {

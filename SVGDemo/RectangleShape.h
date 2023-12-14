@@ -6,7 +6,7 @@
 #include <windows.h>
 #include <gdiplus.h>
 
-class RectangleShape : public FillColor, public Shape {
+class RectangleShape : public Shape {
 public:
     RectangleShape();
 
