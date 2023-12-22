@@ -1,12 +1,47 @@
-﻿  SVGDemo.cpp
-D:\Study\HOC KY 1 - 2023-20234\OOP\SVG_Project\SVG_Project\SVGDemo\SVGDemo.cpp(171,79): warning C4267: 'argument': conversion from 'size_t' to 'INT', possible loss of data
-D:\Study\HOC KY 1 - 2023-20234\OOP\SVG_Project\SVG_Project\SVGDemo\SVGDemo.cpp(176,79): warning C4267: 'argument': conversion from 'size_t' to 'INT', possible loss of data
-D:\Study\HOC KY 1 - 2023-20234\OOP\SVG_Project\SVG_Project\SVGDemo\SVGDemo.cpp(188,111): warning C4244: 'argument': conversion from 'int' to 'Gdiplus::REAL', possible loss of data
-D:\Study\HOC KY 1 - 2023-20234\OOP\SVG_Project\SVG_Project\SVGDemo\SVGDemo.cpp(190,88): warning C4267: 'argument': conversion from 'size_t' to 'INT', possible loss of data
-D:\Study\HOC KY 1 - 2023-20234\OOP\SVG_Project\SVG_Project\SVGDemo\SVGDemo.cpp(194,37): warning C4244: 'argument': conversion from 'int' to 'Gdiplus::REAL', possible loss of data
-D:\Study\HOC KY 1 - 2023-20234\OOP\SVG_Project\SVG_Project\SVGDemo\SVGDemo.cpp(195,77): warning C4267: 'argument': conversion from 'size_t' to 'INT', possible loss of data
-D:\Study\HOC KY 1 - 2023-20234\OOP\SVG_Project\SVG_Project\SVGDemo\SVGDemo.cpp(246,40): warning C4244: 'argument': conversion from 'int' to 'Gdiplus::REAL', possible loss of data
-D:\Study\HOC KY 1 - 2023-20234\OOP\SVG_Project\SVG_Project\SVGDemo\SVGDemo.cpp(247,70): warning C4244: 'argument': conversion from 'int' to 'Gdiplus::REAL', possible loss of data
-D:\Study\HOC KY 1 - 2023-20234\OOP\SVG_Project\SVG_Project\SVGDemo\SVGDemo.cpp(247,65): warning C4244: 'argument': conversion from 'int' to 'Gdiplus::REAL', possible loss of data
-D:\Study\HOC KY 1 - 2023-20234\OOP\SVG_Project\SVG_Project\SVGDemo\SVGDemo.cpp(345,15): warning C4244: 'return': conversion from 'WPARAM' to 'int', possible loss of data
-  SVGDemo.vcxproj -> D:\Study\HOC KY 1 - 2023-20234\OOP\SVG_Project\SVG_Project\x64\Debug\SVGDemo.exe
+﻿  LinearGradient.cpp
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\LinearGradient.cpp(18,63): error C2102: '&' requires l-value
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\LinearGradient.cpp(18,83): error C2102: '&' requires l-value
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\LinearGradient.cpp(18,103): error C2102: '&' requires l-value
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\LinearGradient.cpp(18,30): warning C4477: 'sscanf_s' : format string '%d' requires an argument of type 'int *', but variadic argument 1 has type 'BYTE *'
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\LinearGradient.cpp(18,30): message : consider using '%hhd' in the format string
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\LinearGradient.cpp(18,30): warning C4477: 'sscanf_s' : format string '%d' requires an argument of type 'int *', but variadic argument 2 has type 'BYTE *'
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\LinearGradient.cpp(18,30): message : consider using '%hhd' in the format string
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\LinearGradient.cpp(18,30): warning C4477: 'sscanf_s' : format string '%d' requires an argument of type 'int *', but variadic argument 3 has type 'BYTE *'
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\LinearGradient.cpp(18,30): message : consider using '%hhd' in the format string
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\LinearGradient.cpp(19,63): error C2102: '&' requires l-value
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\LinearGradient.cpp(19,83): error C2102: '&' requires l-value
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\LinearGradient.cpp(19,103): error C2102: '&' requires l-value
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\LinearGradient.cpp(19,30): warning C4477: 'sscanf_s' : format string '%d' requires an argument of type 'int *', but variadic argument 1 has type 'BYTE *'
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\LinearGradient.cpp(19,30): message : consider using '%hhd' in the format string
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\LinearGradient.cpp(19,30): warning C4477: 'sscanf_s' : format string '%d' requires an argument of type 'int *', but variadic argument 2 has type 'BYTE *'
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\LinearGradient.cpp(19,30): message : consider using '%hhd' in the format string
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\LinearGradient.cpp(19,30): warning C4477: 'sscanf_s' : format string '%d' requires an argument of type 'int *', but variadic argument 3 has type 'BYTE *'
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\LinearGradient.cpp(19,30): message : consider using '%hhd' in the format string
+  LineShape.cpp
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\LineShape.cpp(45,107): warning C4244: 'argument': conversion from 'int' to 'Gdiplus::REAL', possible loss of data
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\LineShape.cpp(51,33): warning C4244: 'argument': conversion from 'int' to 'Gdiplus::REAL', possible loss of data
+  SVGDemo.cpp
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\SVGDemo.cpp(59,27): error C2660: 'LinearGradient::applyGradient': function does not take 0 arguments
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\LinearGradient.h(21,10): message : see declaration of 'LinearGradient::applyGradient'
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\SVGDemo.cpp(59,27): message : while trying to match the argument list '()'
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\SVGDemo.cpp(189,76): warning C4267: 'argument': conversion from 'size_t' to 'INT', possible loss of data
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\SVGDemo.cpp(194,76): warning C4267: 'argument': conversion from 'size_t' to 'INT', possible loss of data
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\SVGDemo.cpp(206,111): warning C4244: 'argument': conversion from 'int' to 'Gdiplus::REAL', possible loss of data
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\SVGDemo.cpp(208,85): warning C4267: 'argument': conversion from 'size_t' to 'INT', possible loss of data
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\SVGDemo.cpp(212,37): warning C4244: 'argument': conversion from 'int' to 'Gdiplus::REAL', possible loss of data
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\SVGDemo.cpp(213,74): warning C4267: 'argument': conversion from 'size_t' to 'INT', possible loss of data
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\SVGDemo.cpp(264,40): warning C4244: 'argument': conversion from 'int' to 'Gdiplus::REAL', possible loss of data
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\SVGDemo.cpp(265,70): warning C4244: 'argument': conversion from 'int' to 'Gdiplus::REAL', possible loss of data
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\SVGDemo.cpp(265,65): warning C4244: 'argument': conversion from 'int' to 'Gdiplus::REAL', possible loss of data
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\SVGDemo.cpp(363,15): warning C4244: 'return': conversion from 'WPARAM' to 'int', possible loss of data
+  TextShape.cpp
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\TextShape.cpp(64,42): warning C4244: 'argument': conversion from 'float' to 'BYTE', possible loss of data
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\TextShape.cpp(66,56): warning C4244: 'argument': conversion from 'int' to 'Gdiplus::REAL', possible loss of data
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\TextShape.cpp(73,29): warning C4244: 'argument': conversion from 'int' to 'Gdiplus::REAL', possible loss of data
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\TextShape.cpp(114,28): warning C4244: 'argument': conversion from 'int' to 'Gdiplus::REAL', possible loss of data
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\TextShape.cpp(121,58): warning C4244: 'argument': conversion from 'int' to 'Gdiplus::REAL', possible loss of data
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\TextShape.cpp(121,53): warning C4244: 'argument': conversion from 'int' to 'Gdiplus::REAL', possible loss of data
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\TextShape.cpp(67,24): warning C4930: 'Gdiplus::SolidBrush textBrush(Gdiplus::Color)': prototyped function not called (was a variable definition intended?)
+E:\Downloads\CSC10003\Team_Project\SVG_Project\SVGDemo\TextShape.cpp(74,24): warning C4930: 'Gdiplus::SolidBrush textBrush(Gdiplus::Color)': prototyped function not called (was a variable definition intended?)
+  ViewBox.cpp
+  Generating Code...

@@ -150,10 +150,12 @@
     <ClInclude Include="CircleShape.h" />
     <ClInclude Include="EllipseShape.h" />
     <ClInclude Include="FillColor.h" />
+    <ClInclude Include="LinearGradient.h" />
     <ClInclude Include="LineShape.h" />
     <ClInclude Include="Path.h" />
     <ClInclude Include="PolygonShape.h" />
     <ClInclude Include="PolylineShape.h" />
+    <ClInclude Include="RadialGradient.h" />
     <ClInclude Include="rapidxml.hpp" />
     <ClInclude Include="RectangleShape.h" />
     <ClInclude Include="resource.h" />
@@ -163,15 +165,18 @@
     <ClInclude Include="targetver.h" />
     <ClInclude Include="TextShape.h" />
     <ClInclude Include="Transform.h" />
+    <ClInclude Include="ViewBox.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CircleShape.cpp" />
     <ClCompile Include="EllipseShape.cpp" />
     <ClCompile Include="FillColor.cpp" />
+    <ClCompile Include="LinearGradient.cpp" />
     <ClCompile Include="LineShape.cpp" />
     <ClCompile Include="Path.cpp" />
     <ClCompile Include="PolygonShape.cpp" />
     <ClCompile Include="PolylineShape.cpp" />
+    <ClCompile Include="RadialGradient.cpp" />
     <ClCompile Include="RectangleShape.cpp" />
     <ClCompile Include="Shape.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -182,6 +187,7 @@
     </ClCompile>
     <ClCompile Include="SVGDemo.cpp" />
     <ClCompile Include="TextShape.cpp" />
+    <ClCompile Include="ViewBox.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="SVGDemo.rc" />
