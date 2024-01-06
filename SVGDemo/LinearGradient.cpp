@@ -1,7 +1,9 @@
 #include "stdafx.h"
 #include "rapidxml.hpp"
 #include "LinearGradient.h"
-
+#include <gdiplus.h>
+using namespace Gdiplus;
+#pragma comment (lib,"Gdiplus.lib")
 LinearGradient::LinearGradient(double x1, double y1, double x2, double y2, std::string color1, std::string color2)
     : x1(x1), y1(y1), x2(x2), y2(y2), color1(color1), color2(color2) {}
 
@@ -18,9 +20,8 @@ void LinearGradient::applyGradient(Gdiplus::Graphics& graphics, Gdiplus::RectF r
     BYTE red1 = 0, green1 = 0, blue1 = 0, red2 = 0, green2 = 0, blue2 = 0;
     if (sscanf_s(color1.c_str(), "rgb(%hhd,%hhd,%hhd)", &red1, &green1, &blue1) == 3 &&
         sscanf_s(color2.c_str(), "rgb(%hhd,%hhd,%hhd)", &red2, &green2, &blue2) == 3) {
-
-        colorStop1.SetValue(255, red1, green1, blue1);
-        colorStop2.SetValue(255, red2, green2, blue2);
+        colorStop1 = Gdiplus::Color(255, red1, green1, blue1);
+        colorStop2 = Gdiplus::Color(255, red2, green2, blue2);
     }
     else {
         // Handle sscanf_s failure
